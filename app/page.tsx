@@ -5,7 +5,7 @@ export default function Home() {
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="background p-4">
         <div className="scrollContainer ">
-          <div className="top p" >
+          <div className="top grid grid-cols-2 items-center" >
             <Image
               className="p-4 dark:invert"
               src="/pwejar_logo_full_slogan.svg"
@@ -17,18 +17,19 @@ export default function Home() {
             <div className="breadcrumbs text-sm p-2">
               <ul>
                 <li><a>Home</a></li>
-                <li><a>Documents</a></li>
-                <li>Add Document</li>
+                <li><a>Businesses</a></li>
+                <li>Products</li>
               </ul>
             </div>
           </div>
-          <div className="top">
-            <div className="images p-8 flex ">
+          <div className="top p-16"></div>
+          <div className="top flex justify-center">
+            <div className=" images p-8 flex justify-center">
               <Image
                   className="m-1 dark:invert"
                   src="/screen 2.jpg"
                   alt="Next.js logo"
-                  width={90}
+                  width={85}
                   height={38}
                   priority
                 />
@@ -36,7 +37,7 @@ export default function Home() {
                   className="m-1 dark:invert"
                   src="/screen 7.jpg"
                   alt="Next.js logo"
-                  width={90}
+                  width={85}
                   height={38}
                   priority
                 />
@@ -44,7 +45,7 @@ export default function Home() {
                   className="m-1 dark:invert"
                   src="/shot 1.jpg"
                   alt="Next.js logo"
-                  width={90}
+                  width={85}
                   height={38}
                   priority
                 />
@@ -53,12 +54,12 @@ export default function Home() {
                   src="/wscreen.jpeg"
                   alt="Next.js logo"
                   width={250}
-                  height={38}
+                  height={85}
                   priority
                 />
 
             </div>
-              <div className="p-6">
+              <div className="p-6 self-end">
                 <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
                   <li className="mb-2">
                     Get started by editing{" "}
@@ -98,7 +99,7 @@ export default function Home() {
             
           </div>
           <div className="top items-center justify-items-center ">
-            <h1 className="">Boost your business with Mtaabizz POS</h1>
+            <h1 className="">🚀 Boost your business with Mtaabizz POS</h1>
           </div>
         </div>
       </main>
