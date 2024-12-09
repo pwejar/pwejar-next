@@ -1,25 +1,28 @@
+/* eslint-disable react/jsx-key */
 import Image from "next/image";
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import db from "./firebase/clientApp";
-
+import { Store } from "./app.interface";
+import StoreComponent from "./components/Store";
+let stores: Store[] | null = null
 const fetchData = async () => {
   const collectionRef = collection(db,'stores')
   const collectionQuery = query(collectionRef, where('verified', '==', true))
 
   try {
     const querySnapshot = await getDocs(collectionQuery);
-    const users = querySnapshot.docs.map(doc => ({
+    stores = querySnapshot.docs.map(doc => ({
       id: doc.id,
-      ...doc.data()
+      ...doc.data() as Store
     }));
-    console.log(users);
+    console.log(stores);
   } catch (error) {
     console.error('Error fetching data:', error);
   }
 };
 
-fetchData();
-export default function Home() {
+export default async function Home() {
+  await fetchData()
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="background p-4">
@@ -36,7 +39,9 @@ export default function Home() {
             <div className="breadcrumbs text-sm p-2">
               <ul>
                 <li><a>Home</a></li>
+                <li><a>About</a></li>
                 <li><a>Businesses</a></li>
+                <li><a>Events & Tickets</a></li>
                 <li>Products</li>
               </ul>
             </div>
@@ -117,8 +122,13 @@ export default function Home() {
               </div>
             
           </div>
-          <div className="top items-center justify-items-center ">
+          <div className=" items-center justify-items-center bg-slate-200">
             <h1 className="">🚀 Boost your business with Mtaabizz POS</h1>
+          </div>
+          <div className="storeContainer grid p-2 gap-1 bg-slate-200">
+            {stores?.map((store, index) => {
+              return <StoreComponent key={index} store={store}/>
+            })}
           </div>
         </div>
       </main>

@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+* {
+  box-sizing: border-box;
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -31,9 +33,22 @@ body {
   background-repeat: no-repeat; 
   background-position: center;
   background-size: cover;
-  overscroll-behavior: contain;
+  overflow: scroll;
+}
+.scrollContainer{
+  position: relative;
 }
 .top{
   background-color: white;
+  
 }
-
+.storeContainer{
+  @media (min-width: 992px) {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+  @media (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+  }
+}
