@@ -1,5 +1,24 @@
 import Image from "next/image";
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import db from "./firebase/clientApp";
 
+const fetchData = async () => {
+  const collectionRef = collection(db,'stores')
+  const collectionQuery = query(collectionRef, where('verified', '==', true))
+
+  try {
+    const querySnapshot = await getDocs(collectionQuery);
+    const users = querySnapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data()
+    }));
+    console.log(users);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+};
+
+fetchData();
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
