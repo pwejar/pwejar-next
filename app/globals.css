@@ -1,9 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-* {
-  box-sizing: border-box;
-}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -33,13 +31,13 @@ body {
   background-repeat: no-repeat; 
   background-position: center;
   background-size: cover;
-  overflow: scroll;
+  overflow-y: scroll;
 }
-.scrollContainer{
-  position: relative;
+.pwejar-bg{
+  background-color: #3e2d44;
 }
 .top{
-  background-color: white;
+  /* background-color: white; */
   
 }
 .storeContainer{
