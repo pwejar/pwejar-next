@@ -33,11 +33,14 @@ body {
   background-size: cover;
   overflow-y: scroll;
 }
+.scrollContainer{
+  position: relative;
+}
 .pwejar-bg{
   background-color: #3e2d44;
 }
 .top{
-  /* background-color: white; */
+  background-color: white;
   
 }
 .storeContainer{
