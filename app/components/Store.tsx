@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { Store } from "../app.interface";
 
-export default async function StoreComponent({ store }) {
+export default async function StoreComponent(props: {store: Store}) {
+    const {store} = props
     return (
         <div className="p-2">
             <div className="card w-full h-full  shadow-xl bg-base-100 grid items-center grid-cols-2 gap-2">

@@ -40,9 +40,8 @@ export default async function Home() {
               />
               <div className="breadcrumbs text-sm p-2">
                 <ul>
-                  <li><a>Home</a></li>
-                  <li><a>About</a></li>
-                  <li><a>Businesses</a></li>
+                  <li>Home</li>
+                  <li><a target="blank" href="https://mtaabizz.com/business">Businesses</a></li>
                   <li><a>Events & Tickets</a></li>
                   <li>Products</li>
                 </ul>
@@ -55,15 +54,7 @@ export default async function Home() {
                     className="m-1 dark:invert"
                     src="/screen 2.jpg"
                     alt="Next.js logo"
-                    width={85}
-                    height={38}
-                    priority
-                  />
-                <Image
-                    className="m-1 dark:invert"
-                    src="/screen 7.jpg"
-                    alt="Next.js logo"
-                    width={85}
+                    width={115}
                     height={38}
                     priority
                   />
@@ -71,7 +62,7 @@ export default async function Home() {
                     className="m-1 dark:invert"
                     src="/shot 1.jpg"
                     alt="Next.js logo"
-                    width={85}
+                    width={115}
                     height={38}
                     priority
                   />
@@ -79,22 +70,24 @@ export default async function Home() {
                     className="m-1 dark:invert"
                     src="/wscreen.jpeg"
                     alt="Next.js logo"
-                    width={250}
+                    width={350}
                     height={85}
                     priority
                   />
 
               </div>
               <div className="p-6 self-end">
-                <div className="grid justify-center">
-                  <Image
-                    className=" dark:invert"
-                    src="/mtaabizz icon.svg"
-                    alt="mtaabizz logo"
-                    width={90}
-                    height={38}
-                    priority
-                  />
+                <div className="p-8">
+                  <div className="w-full flex justify-center">
+                    <Image
+                      className=" dark:invert"
+                      src="/mtaabizz icon.svg"
+                      alt="mtaabizz logo"
+                      width={90}
+                      height={38}
+                      priority
+                    />
+                  </div>
                   <Image
                     className=" dark:invert"
                     src="/mtaabizz name os logo.png"
@@ -116,8 +109,16 @@ export default async function Home() {
                 </ol> */}
                 <div className="flex gap-4 items-center flex-col sm:flex-row">
                   <a
+                    className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
+                    href="https://www.youtube.com/@pwejar"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Watch tutorials
+                  </a>
+                  <a
                     className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-                    href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+                    href="https://play.google.com/store/apps/details?id=com.pwejar.mtaabizz&pcampaignid=pwejar.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -130,18 +131,10 @@ export default async function Home() {
                     />
                     Download Now
                   </a>
-                  <a
-                    className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-                    href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Watch tutorials
-                  </a>
                 </div>
               </div>
             </div>
-            <main  className="pwejar-bg p-8">
+            <main  className="bg-gray-800 p-8">
                 <h3>About us</h3>
                 <p className="">
                   Pwejar Hub Limited is a software development company. The company aims to help small-scale businesses in Africa grow by providing them with the necessary tools they need to survive in this digital age. It was founded in 2019. We are passionate about using their skills to benefit the community, and since then we have been researching and designing the best tool to fit Kenya&apos;s small-scale business. Instead of making them adapt complex tools, we have created tools that adapt to them by simplifying and customization.
