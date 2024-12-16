@@ -41,7 +41,7 @@ export default async function Home() {
   return (
     <div className={`background p-2 md:p-4 ${gabaritoFont.className}`}>
       <div className="scrollContainer">
-        <main className="w-full ">
+        <div className="w-full ">
           <div className="scrollContainer ">
             <div className="bg-light">
               <div className="grid grid-cols-2 items-center" >
@@ -181,7 +181,7 @@ export default async function Home() {
               </div>
             </div>
           </div>
-        </main>
+        </div>
         <div>
           <h2>
             <b>Pwejar Tickets and Events</b>

@@ -17,6 +17,12 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      transitionDelay: {
+        '50': '50ms',
+        '150': '150ms',
+        '250': '250ms',
+        '350': '350ms',
+      }
     },
   },
   daisyui: {

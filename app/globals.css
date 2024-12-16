@@ -79,15 +79,14 @@ body {
   p{
       text-align: center;
       width: 100%;
-      margin: 7px 0;
+      margin: 1rem 0;
       box-shadow: 0px 0px 2px 2px #0d121f; 
       padding: 7px;
-      background-color: rgb(111, 119, 131);
+      background-color: rgb(210, 213, 217);
       font-weight: bolder;
       color: #0d121f;
-      transform: translateY(100%);
       user-select: none;
-      
+      border-radius: 0.5rem;      
   }
   
 }
@@ -115,12 +114,14 @@ body {
 }
 .on{
   opacity: 1;
-  transform: translateY(100%);
 }
 .off{
   opacity: 0;
-  transform: translateY(0);
+  transform: translateY(100%);
 }
-.animation{
-  transition: all ease 3s;
+.menuOff{
+  transform: translateY(100%);
+  transition: all ease-in-out 0.3s;
+  opacity: 0;
 }
+
