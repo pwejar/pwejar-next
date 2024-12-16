@@ -7,6 +7,11 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      pwejar:"#3e2d44",
+      lightBackground: "#b5bbc2",
+      light:"#ffffff"
+    },
     extend: {
       colors: {
         background: "var(--background)",
