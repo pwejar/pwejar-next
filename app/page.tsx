@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
 import Image from "next/image";
 import { collection, getDocs, query, where } from 'firebase/firestore';
@@ -44,7 +45,7 @@ export default async function Home() {
         <div className="w-full ">
           <div className="scrollContainer ">
             <div className="bg-light">
-              <div className="grid grid-cols-2 items-center" >
+              <div className="grid sm:text-center md:grid-cols-2 items-center" >
                 <Image
                   className="p-4 dark:invert"
                   src="/pwejar_logo_full_slogan.svg"
@@ -62,48 +63,26 @@ export default async function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="p-16"></div>
-              <div className="flex justify-around p-8">
-                <div className=" images p-8 flex justify-center">
-                  <Image
-                      className="m-1 dark:invert"
-                      src="/screen 2.jpg"
-                      alt="Next.js logo"
-                      width={115}
-                      height={38}
-                      priority
-                    />
-                  <Image
-                      className="m-1 dark:invert"
-                      src="/shot 1.jpg"
-                      alt="Next.js logo"
-                      width={115}
-                      height={38}
-                      priority
-                    />
-                  <Image
-                      className="m-1 dark:invert"
-                      src="/wscreen.jpeg"
-                      alt="Next.js logo"
-                      width={350}
-                      height={85}
-                      priority
-                    />
-
+              <div className="md:flex justify-center p-8">
+                <div className=" images md:p-8 flex-wrap flex justify-center">
+                  <img
+                    className="m-1 max-w-96 dark:invert"
+                    src="/mtaabizz bronchure.png"
+                    alt="mtaabizz add mtaabiz"
+                  />
                 </div>
-                <div className="p-6 self-end">
-                  <div className="p-8">
-                    <div className="w-full flex justify-center">
+                <div className="md:p-6 self-end">
+                  <div className="md:p-8">
+                    <div className="w-full flex items-center justify-center md:grid">
                       <Image
-                        className=" dark:invert"
+                        className="md:mx-auto dark:invert"
                         src="/mtaabizz icon.svg"
                         alt="mtaabizz logo"
                         width={70}
                         height={28}
                         priority
                       />
-                    </div>
-                    <Image
+                      <Image
                       className=" dark:invert"
                       src="/mtaabizz name os logo.png"
                       alt="pwejar hub logo"
@@ -111,18 +90,9 @@ export default async function Home() {
                       height={28}
                       priority
                     />
+                    </div>
                   </div>
-                  {/* <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-                    <li className="mb-2">
-                      Get started by editing{" "}
-                      <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-                        app/page.tsx
-                      </code>
-                      .
-                    </li>
-                    <li>Save and see your changes instantly.</li>
-                  </ol> */}
-                  <div className="flex gap-4 items-center flex-col sm:flex-row">
+                  <div className="flex gap-4 justify-center items-center flex-col sm:flex-row">
                     <a
                       className="rounded-full border border-solid border-black/[1] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
                       href="https://www.youtube.com/@pwejar"
@@ -151,10 +121,10 @@ export default async function Home() {
               </div>
             </div>
             <main  className="bg-lightBackground  p-16 grid lg:grid-cols-2">
-              <div className="p-2">
+              <div className="p-2 ">
                 <h3 className={`text-pwejar text-4xl ${chicleFont.className}` }>About us</h3>
                 <p className={`text-justify ${gabaritoFont.className}`}>
-                  Pwejar Hub Limited is a software development company. The company aims to help small-scale businesses in Africa grow by providing them with the necessary tools they need to survive in this digital age. It was founded in 2019. We are passionate about using their skills to benefit the community, and since then we have been researching and designing the best tool to fit Kenya&apos;s small-scale business. Instead of making them adapt complex tools, we have created tools that adapt to them by simplifying and customization.
+                  Pwejar Hub Limited is a software development company. The company aims to help small-scale businesses in Africa grow by providing them with the necessary tools they need to survive in this digital age. We are passionate about using our skills to benefit the community. Founded in 2019, since then we have been researching and designing the best tool to fit Kenya&apos;s small-scale business. Instead of making them adapt complex tools, we have created tools that adapt to them by simplifying and customization.
                 </p>
               </div>
               <div className="p-2">
@@ -178,6 +148,9 @@ export default async function Home() {
                 {stores?.map((store, index) => {
                   return <StoreComponent key={index} store={store}/>
                 })}
+              </div>
+              <div className="items-center justify-items-center">
+                <a href="https://mtaabizz.com/businesses" target="blank" className={`p-8 ${chicleFont.className} text-lightBackground`}>See more... </a>
               </div>
             </div>
           </div>

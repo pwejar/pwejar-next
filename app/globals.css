@@ -36,9 +36,6 @@ body {
 .scrollContainer{
   position: relative;
 }
-.pwejar-bg{
-  background-color: #3e2d44;
-}
 .storeContainer{
   @media (min-width: 992px) {
     display: grid;
@@ -120,8 +117,10 @@ body {
   transform: translateY(100%);
 }
 .menuOff{
-  transform: translateY(100%);
+  /* transform: translateY(100%); */
   transition: all ease-in-out 0.3s;
   opacity: 0;
+  pointer-events: none;
 }
+
 

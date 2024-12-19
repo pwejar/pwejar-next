@@ -35,12 +35,16 @@ export default function SideMenu() {
                     <path ref={lineTwo} className="lineTwo" d="M8.1447 6.6924H1.8033C1.34248 6.6924 0.968903 6.97822 0.968903 7.3308C0.968903 7.68338 1.34248 7.9692 1.8033 7.9692H8.1447C8.60553 7.9692 8.9791 7.68338 8.9791 7.3308C8.9791 6.97822 8.60553 6.6924 8.1447 6.6924Z" />
                 </svg>
             </div>
-            <div ref={menuRef} className="meSlide menuOff  md:hidden">
-                <p className={`transition delay-50 duration-300 ease-in-out ${menuOn?'on':'off'}`}>Home</p>
-                <p className={`transition delay-100 duration-300 ease-in-out ${menuOn?'on':'off'}`}>Businesses</p>
+            <div onClick={() => checked()} ref={menuRef} className="meSlide menuOff  md:hidden">
+                <p className={`transition delay-50 duration-300 ease-in-out ${menuOn?'on':'off'}`}>
+                    Home
+                </p>
+                <a href="https://mtaabizz.com/businesses" target="blank" className={`transition delay-100 duration-300 ease-in-out ${menuOn?'on':'off'}`}>
+                    <p>Businesses</p>
+                </a>
                 <p className={`transition delay-150 duration-300 ease-in-out ${menuOn?'on':'off'}`}>Events & Tickets </p>
                 <p className={`transition delay-200 duration-300 ease-in-out ${menuOn?'on':'off'}`}>Products</p>
-                <p className={`transition delay-250 duration-300 ease-in-out ${menuOn?'on':'off'}`}>Login</p>
+                {/* <p className={`transition delay-250 duration-300 ease-in-out ${menuOn?'on':'off'}`}>Login</p> */}
             </div>
         </div>
     )
